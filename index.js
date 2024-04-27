@@ -53,23 +53,29 @@ const descriptionTwo = document.querySelector(".descriptionTwo");
 const descriptionThree = document.querySelector(".descriptionThree");
 
 async function app(img) {
-  console.log("Loading mobilenet..");
-
-  // Load the model.
-  net = await mobilenet.load();
-  console.log("Successfully loaded model");
-
-  // Make a prediction through the model on our image.
-  //const imgEl = document.getElementById("img");
-  const result = await net.classify(img);
-  console.log(result);
-  descriptionOne.textContent = `${result[0].className} - Probability: ${(
-    result[0].probability * 100
-  ).toFixed(2)}%`;
-  descriptionTwo.textContent = `${result[1].className} - Probability: ${(
-    result[1].probability * 100
-  ).toFixed(2)}%`;
-  descriptionThree.textContent = `${result[2].className} - Probability: ${(
-    result[2].probability * 100
-  ).toFixed(2)}%`;
+  try {
+    descriptionTwo.textContent = "Loading mobilenet..";
+    // Load the model.
+    net = await mobilenet.load();
+    descriptionThree.textContent = "Successfully loaded model";
+    // Make a prediction through the model on our image.
+    //const imgEl = document.getElementById("img");
+    const result = await net.classify(img);
+    descriptionOne.textContent = `${result[0].className} - Probability: ${(
+      result[0].probability * 100
+    ).toFixed(2)}%`;
+    descriptionTwo.textContent = `${result[1].className} - Probability: ${(
+      result[1].probability * 100
+    ).toFixed(2)}%`;
+    descriptionThree.textContent = `${result[2].className} - Probability: ${(
+      result[2].probability * 100
+    ).toFixed(2)}%`;
+  } catch (error) {
+    clearDescription();
+    descriptionOne.textContent = error;
+    descriptionTwo.textContent = "Not valid URL";
+    document.getElementById("addImg").classList.remove("image");
+    document.getElementById("addImg").classList.add("smallIcon");
+    image.src = "img/error.png";
+  }
 }
