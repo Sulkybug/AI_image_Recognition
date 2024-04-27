@@ -29,6 +29,7 @@ clearButton.addEventListener("click", () => {
   linkInput.value = "";
 });
 
+// changing from smallIcon to Image
 const resizeImg = () => {
   if (document.getElementById("addImg").classList.contains("smallIcon")) {
     document.getElementById("addImg").classList.remove("smallIcon");
@@ -59,7 +60,6 @@ async function app(img) {
     net = await mobilenet.load();
     descriptionThree.textContent = "Successfully loaded model";
     // Make a prediction through the model on our image.
-    //const imgEl = document.getElementById("img");
     const result = await net.classify(img);
     descriptionOne.textContent = `${result[0].className} - Probability: ${(
       result[0].probability * 100
