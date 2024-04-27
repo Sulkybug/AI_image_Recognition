@@ -72,7 +72,7 @@ async function app(img) {
     ).toFixed(2)}%`;
   } catch (error) {
     clearDescription();
-    descriptionOne.textContent = error;
+    descriptionOne.textContent = "Ohhhh nooo something has gone wrong!";
     descriptionTwo.textContent = "Not valid URL";
     document.getElementById("addImg").classList.remove("image");
     document.getElementById("addImg").classList.add("smallIcon");
