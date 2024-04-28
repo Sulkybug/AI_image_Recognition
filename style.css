@@ -171,8 +171,7 @@ body {
 
   .descriptionBox {
     width: 85%;
-    overflow: scroll;
-    height: 290px;
+    height: auto;
   }
 
   #link {
