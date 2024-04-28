@@ -153,6 +153,13 @@ body {
   filter: drop-shadow(5px 7px 2px rgb(0, 0, 0));
 }
 
+.descriptionOne {
+  margin-bottom: 0;
+}
+.descriptionTwo {
+  margin-bottom: 0;
+}
+
 @media (max-width: 800px) {
   body {
     scale: 0.9;
