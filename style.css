@@ -172,11 +172,19 @@ body {
   .descriptionBox {
     width: 85%;
     overflow: scroll;
-    height: 280px;
+    height: 290px;
   }
 
   #link {
     width: 250px;
     width: 60vw;
+  }
+
+  .descriptionOne {
+    margin: 0;
+  }
+  .descriptionTwo,
+  .descriptionThree {
+    margin-bottom: 0;
   }
 }
