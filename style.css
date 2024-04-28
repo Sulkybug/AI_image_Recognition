@@ -155,12 +155,12 @@ body {
 
 @media (max-width: 800px) {
   body {
-    width: 95%;
-    scale: 0.8;
+    scale: 0.9;
   }
 
   body {
     height: 95vh;
+    width: 95vw;
   }
 
   .image,
@@ -177,5 +177,6 @@ body {
 
   #link {
     width: 250px;
+    width: 60vw;
   }
 }
