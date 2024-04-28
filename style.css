@@ -156,20 +156,23 @@ body {
 @media (max-width: 800px) {
   body {
     width: 95%;
-    width: 95%;
-    scale: 0.75;
+    scale: 0.8;
+  }
+
+  body {
+    height: 95vh;
   }
 
   .image,
   .imgBox {
     width: 90%;
     height: 90%;
-    overflow: scroll;
   }
 
   .descriptionBox {
     width: 85%;
     overflow: scroll;
+    height: 280px;
   }
 
   #link {
