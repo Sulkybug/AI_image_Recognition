@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/devin-chavez-font");
 :root {
   color-scheme: light dark;
 }
@@ -121,6 +122,12 @@ body {
   font-optical-sizing: auto;
 }
 
+#link:focus {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
 #clear {
   display: flex;
   justify-content: center;
@@ -151,6 +158,9 @@ body {
   justify-content: center;
   flex-direction: column;
   filter: drop-shadow(5px 7px 2px rgb(0, 0, 0));
+  font-family: "Devin Chavez Font", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .descriptionOne {
